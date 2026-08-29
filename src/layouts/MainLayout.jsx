@@ -1,6 +1,7 @@
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import Home from '../pages/Home';
+import Explore from '../pages/Explore';
 
 export default function MainLayout() {
     return (
@@ -8,7 +9,8 @@ export default function MainLayout() {
             <Header />
             <main className="flex-grow p-6 w-full">
                 {/* Nội dung trang chính */}
-                <Home/>
+                {/* <Home/> */}
+                <Explore/>
             </main>
             <Footer />
         </div>
