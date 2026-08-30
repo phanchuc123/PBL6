@@ -2,12 +2,8 @@ import Catalog from '../components/comon/Catalog';
 import PlaceCard from '../components/comon/PlaceCard';
 
 import heroImg from '../assets/images/cr.jpg';
-import bien from '../assets/images/bien.jpg';
-import nui from '../assets/images/nui.jpg';
-import amthuc from '../assets/images/amthuc.jpg';
-import vanhoa from '../assets/images/vanhoa.jpg';
-import bana1 from '../assets/images/bana1.jpg';
-import bandao from '../assets/images/bandao.jpg';
+
+import { categoriesData,placesData,districtsData } from '../database/data';
 
 export default function Home() {
     return (
@@ -38,11 +34,10 @@ export default function Home() {
             {/* Catalog Section */}
             <div className="w-full max-w-7xl mx-auto px-2">
                 <h2 className="text-black font-bold text-2xl md:text-3xl mb-6">Khám phá theo danh mục</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    <Catalog name="Biển đảo" img={bien} />
-                    <Catalog name="Núi non" img={nui} />
-                    <Catalog name="Ẩm thực" img={amthuc} />
-                    <Catalog name="Văn hóa" img={vanhoa} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+                    {categoriesData.map((item)=>(
+                        <Catalog name={item.name} img = {item.img}/>
+                    ))}
                 </div>
             </div>
 
@@ -50,19 +45,31 @@ export default function Home() {
             <div className="w-full max-w-7xl mx-auto px-2">
                 <h2 className="text-black font-bold text-2xl md:text-3xl mb-6">Địa điểm nổi tiếng</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    <PlaceCard name="Bà Nà Hills" img={bana1} des="Khu du lịch trên núi tuyệt đẹp" stars="4.8" price = '$$' category ='Giải trí' address='Hòa Vang' />
-                    <PlaceCard name="Cầu Vàng" img={bandao} des="Biểu tượng kiến trúc độc đáo" stars="4.0" price = 'Free' category ='Thiên nhiên' address='Hải Châu' />
-                    <PlaceCard name="Bán đảo Sơn Trà" img={nui} des="Thiên nhiên hoang sơ hùng vĩ" stars="4.6" price = '$$' category ='Thiên nhiên' address='Sơn trà' />
-                    <PlaceCard name="Biển Mỹ Khê" img={bien} des="Bãi biển trong xanh mát mẻ" stars="4.3" price = 'Free' category ='Biển' address='Sơn Trà' />
+                    {placesData.map((place) => (
+                        <PlaceCard 
+                            key={place.id}
+                            name={place.name}
+                            img={place.img}
+                            des={place.des}
+                            stars={place.stars}
+                            price={place.priceDisplay}
+                            category={place.category}
+                            address={place.address}
+                        />
+                    ))}
                 </div>
             </div>
-            <div className='flex flex-wrap gap-4 bg-cyan-700 rounded-xl p-10'>
-                <div className='flex flex-col grow-2'>
-                    <h2 className='font-bold text-2xl text-white'>Lập lịch trình thông minh chỉ trong 1 phút</h2>
-                    <p className='text-white'>Để chúng tôi gợi ý hành tronhg hoàn hảo dựa trên sở thích và ngân sách của bản</p>
+
+            {/* Banner Lập lịch trình */}
+            <div className='flex flex-wrap gap-4 bg-[#006971] rounded-2xl p-8 md:p-10 items-center justify-between shadow-sm'>
+                <div className='flex flex-col space-y-2'>
+                    <h2 className='font-bold text-2xl md:text-3xl text-white'>Lập lịch trình thông minh chỉ trong 1 phút</h2>
+                    <p className='text-cyan-100 text-sm md:text-base'>Để chúng tôi gợi ý hành trình hoàn hảo dựa trên sở thích và ngân sách của bạn</p>
                 </div>
-                <div className='grow-1 flex justify-center'>
-                    <a href="" className='flex items-center justify-center px-4 py-2 bg-orange-600 rounded-xl'>Bắt đầu ngay</a>
+                <div>
+                    <a href="/explore" className='inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-colors shadow-md'>
+                        Bắt đầu ngay
+                    </a>
                 </div>
             </div>
         </section>
