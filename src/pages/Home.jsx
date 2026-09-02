@@ -48,6 +48,7 @@ export default function Home() {
                     {placesData.map((place) => (
                         <PlaceCard 
                             key={place.id}
+                            id={place.id}
                             name={place.name}
                             img={place.img}
                             des={place.des}

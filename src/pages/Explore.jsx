@@ -95,31 +95,34 @@ export default function Explore() {
                     <button type="submit" className="bg-[#006971] w-full p-2.5 rounded-xl font-bold text-white cursor-pointer hover:bg-[#00555c] transition-colors">Áp dụng</button>
                 </div>
             </aside>
-
-            <div className="w-3/4 h-[calc(100vh-150px)] overflow-y-auto pr-2">
-                {filterPlace.length > 0 ?  
-                    (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        {filterPlace.map((item) => (
-                            <PlaceCard
-                                key={item.id}
-                                name={item.name}
-                                img={item.img}
-                                des={item.des}
-                                stars={item.stars}
-                                price={item.priceDisplay}
-                                category={item.category}
-                                address={item.address}
-                            />      
-                        ))} 
-                    </div>
-                    ):
-                    (
-                        <div className="flex items-center justify-center h-full min-h-[400px] text-center">
-                            <h3 className="text-xl font-bold text-gray-700 mb-2">Không tìm thấy dữ liệu</h3>
+            <div className = 'flex flex-col gap-y-4 font-bold'>
+                <span>Tìm thấy {filterPlace.length} kết quả</span>
+                <div className="w-full h-[calc(100vh-150px)] overflow-y-auto pr-2">
+                    {filterPlace.length > 0 ?  
+                        (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            {filterPlace.map((item) => (
+                                <PlaceCard
+                                    key={item.id}
+                                    id={item.id}
+                                    name={item.name}
+                                    img={item.img}
+                                    des={item.des}
+                                    stars={item.stars}
+                                    price={item.priceDisplay}
+                                    category={item.category}
+                                    address={item.address}
+                                />      
+                            ))} 
                         </div>
-                    )
-                }        
+                        ):
+                        (
+                            <div className="flex items-center justify-center h-full min-h-[400px] text-center">
+                                <h3 className="text-xl font-bold text-gray-700 mb-2">Không tìm thấy dữ liệu</h3>
+                            </div>
+                        )
+                    }        
+                </div>
             </div>
         </section>
     );
