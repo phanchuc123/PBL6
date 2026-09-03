@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { MapPin, ArrowLeft, Star } from "lucide-react";
 import PlaceAction from "../components/comon/PlaceAction";
+import PlaceMap from "../components/comon/PlaceMap";
 import { placesData } from "../database/data";
 
 export default function DetailPlace() {
@@ -35,7 +36,9 @@ export default function DetailPlace() {
                     <p>{place.infor}</p>
                 </div>
             </div>
-
+            <div>
+                <PlaceMap mapUrl={place.mapUrl} />
+            </div>
         </section>
     );
 }

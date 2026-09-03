@@ -37,7 +37,9 @@ const placesData = [
         address: 'Hòa Vang',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.74617948977!2d108.14729407520427!3d16.073660584606497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218d68dff9545%3A0x714561e9f3a7292c!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6FjaCBLaG9hIC0gxJDhuqFpIGjhu41jIMSQw6AgTuG6tW5n!5e1!3m2!1svi!2s!4v1788395381790!5m2!1svi!2s'
     },
+
     {
         id: 2,
         name: 'Cầu Vàng (Golden Bridge)',
@@ -51,7 +53,9 @@ const placesData = [
         address: 'Hòa Vang',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.991958237527!2d108.22511767520393!3d16.061104184617246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219d2f38ce45d%3A0xbfa47dd116d4db88!2zQ-G6p3UgUuG7k25nLCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e1!3m2!1svi!2s!4v1788396694907!5m2!1svi!2s'
     },
+
     {
         id: 3,
         name: 'Biển Mỹ Khê',
@@ -65,7 +69,9 @@ const placesData = [
         address: 'Sơn Trà',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7787.951127848847!2d108.24202409212164!3d16.0619420384657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421782f7fa0ee3%3A0xeafb8ba272ee55ac!2zQsOjaSBiaeG7g24gTeG7uSBLaMOq!5e1!3m2!1svi!2sus!4v1788396774732!5m2!1svi!2sus'
     },
+
     {
         id: 4,
         name: 'Bán đảo Sơn Trà',
@@ -79,7 +85,9 @@ const placesData = [
         address: 'Sơn Trà',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249133.31358100995!2d108.11088354381765!3d16.126593049698688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31423d72d1be522d%3A0x1e7339a6534e4e7!2zQsOhbiDEkeG6o28gU8ahbiBUcsOg!5e1!3m2!1svi!2sus!4v1788396840081!5m2!1svi!2sus'
     },
+
     {
         id: 5,
         name: 'Chợ Đêm Sơn Trà & Ẩm Thực Đà Thành',
@@ -93,7 +101,9 @@ const placesData = [
         address: 'Sơn Trà',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249133.31358100995!2d108.11088354381765!3d16.126593049698688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31423d72d1be522d%3A0x1e7339a6534e4e7!2zQsOhbiDEkeG6o28gU8ahbiBUcsOg!5e1!3m2!1svi!2sus!4v1788396840081!5m2!1svi!2sus'
     },
+
     {
         id: 6,
         name: 'Bảo tàng Điêu khắc Chăm',
@@ -107,7 +117,9 @@ const placesData = [
         address: 'Hải Châu',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
+        mapUrl: 'https://www.google.com/maps?q=Bảo+tàng+Điêu+khắc+Chăm,+Đà+Nẵng&output=embed'
     },
+
     {
         id: 7,
         name: 'Danh thắng Ngũ Hành Sơn',
@@ -121,7 +133,9 @@ const placesData = [
         address: 'Ngũ Hành Sơn',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249133.31358100995!2d108.11088354381765!3d16.126593049698688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31423d72d1be522d%3A0x1e7339a6534e4e7!2zQsOhbiDEkeG6o28gU8ahbiBUcsOg!5e1!3m2!1svi!2sus!4v1788396840081!5m2!1svi!2sus'
     },
+
     {
         id: 8,
         name: 'Cầu Rồng Phun Lửa & Phun Nước',
@@ -135,6 +149,8 @@ const placesData = [
         address: 'Hải Châu',
         time: '08:00 - 18:00',
         move: 'Xe máy, ô tô, xe buýt',
-    },
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249133.31358100995!2d108.11088354381765!3d16.126593049698688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31423d72d1be522d%3A0x1e7339a6534e4e7!2zQsOhbiDEkeG6o28gU8ahbiBUcsOg!5e1!3m2!1svi!2sus!4v1788396840081!5m2!1svi!2sus'
+    }
 ];
+
 export { categoriesData, placesData, districtsData };
